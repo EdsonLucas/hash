@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    background-color: #f8f8f8;
+    height: 150px;
+}
+
+.xdt {
+    position: relative;
+    height: 550px;
+    text-align: center;
+    background-color: #14bdac;
+    z-index: 0;
+}
+
+.box {
+    padding: 65px;
+}
+
+#var_1 {
+    border-right: 5px solid grey;
+    border-bottom: 5px solid grey;
+    opacity: 0.5;
+}
+
+#var_2 {
+    border-right: 5px solid grey;
+    border-bottom: 5px solid grey;
+    opacity: 0.5;
+}
+
+#var_3 {
+    border-bottom: 5px solid grey;
+    opacity: 0.5;
+}
+
+#var_4 {
+    border-right: 5px solid grey;
+    opacity: 0.5;
+}
+
+#var_5 {
+    border-right: 5px solid grey;
+    opacity: 0.5;
+}
+
+#var_6 {
+    opacity: 0.5;
+}
+
+#var_7 {
+    border-top: 5px solid grey;
+    border-right: 5px solid grey;
+    opacity: 0.5;
+}
+
+#var_8 {
+    border-top: 5px solid grey;
+    border-right: 5px solid grey;
+    opacity: 0.5;
+}
+
+#var_9 {
+    border-top: 5px solid grey;
+    opacity: 0.5;
+}
+
+@media (max-width: 700px) {
+    .box {
+        padding: 39px;
+    }
+}
+
+#row-main {
+  /* necessary to hide collapsed sidebar */
+  overflow-x: hidden;
+}
+
+#content {
+  /* for the animation */
+  transition: width 0.3s ease;
+}
+
+#sidebar {
+  /* for the animation */
+  transition: margin 0.3s ease;
+}
+
+.collapsed {
+  /* hide it for small displays*/
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .collapsed {
+    display: block;
+    /* same width as sidebar */
+    margin-right: -25%;
+  }
+}
+
+.navbar-toggle {
+    display: block !important;
+    margin-top: 25px !important;
+}
+
+.navbar-toggle span {
+    width: 24px;
+    height: 3px;
+    background-color: #c2c2c2;
+}
+
+.circulo {
+    height:90px;
+    background: radial-gradient(circle closest-side, transparent 0%, transparent 74%, #fff 76%, #fff 98%, rgba(0,0,0,0) 100%);
+}
+
+.xis {
+    height: 90px;
+    font-size: 120px;
+    line-height: 0.6;
+    cursor: default;
+}

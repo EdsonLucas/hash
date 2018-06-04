@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Jogo da Velha</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="pure.css" />
+    </head>
+    <body>
+        <section>
+            <div class="container-fluid p0">
+                <div id="row-main" class="row m0">
+                    <div id="content" class="col-md-12 p0">
+                        <div class="title container-fluid">
+                            <div class="row">
+                                <div class="col-md-12 p0">
+                                    <div class="col-md-11 p0">
+                                        <h1 class="tcenter">Bem Vindo ao Jogo da Velha</h1>
+                                    </div>
+                        			<div class="col-md-1 p0">
+                        				<button id="toggle-sidebar" class="navbar-toggle">
+                            				<span class="sr-only">Toggle navigation</span>
+                            				<span class="icon-bar"></span>
+                            				<span class="icon-bar"></span>
+                            				<span class="icon-bar"></span>
+                        				</button>
+                        			</div>
+
+                                    <div class="col-md-6">
+                                        <button onclick="x()" class="D4JSoe iyEraAtNjQi4-x03_8M7xFMM Gfzyee R1smN Pjsr7c TTT-active">
+                                           <div class="fSXkBc">
+                                              X
+                                              <span class="iyEraAtNjQi4-6SpXOY9RJvI">-</span>
+                                           </div>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button onclick="o()" class="D4JSoe iyEraAtNjQi4-x03_8M7xFMM Gfzyee R1smN Pjsr7c TTT-active">
+                                           <div class="fSXkBc">
+                                              O
+                                              <span class="iyEraAtNjQi4-6SpXOY9RJvI">-</span>
+                                           </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xdt container-fluid">
+                            <div class="row pt50 pl30 pr30">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <div class="col-md-12">
+                                        <div id="var_1" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_2" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_3" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div id="var_4" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_5" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_6" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div id="var_7" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_8" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_9" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sidebar" class="col-md-3 hidden-sm hidden-xs collapsed p0">
+                        oi
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript" src="index.js"></script>
+        <script>
+    		document.getElementById("toggle-sidebar").addEventListener("click", function() {
+    		    document.querySelector("#sidebar").classList.toggle("collapsed");
+    		    document.querySelector("#content").classList.toggle("col-md-9");
+    		});
+        </script>
+    </body>
+</html>
