@@ -1,8 +1,8 @@
-let player, pos, preenchido;
+let player, pos, preenchido, xPontos = 0, oPontos = 0;
 
-pos = ['var_1', 'var_2', 'var_3', 'var_4', 'var_5', 'var_6', 'var_7', 'var_8', 'var_9'];
+pos = ['var_1', 'var_2', 'var_3', 'var_4', 'var_5', 'var_6', 'var_7', 'var_8', 'var_9',];
 
-preenchido = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+preenchido = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 (function() {
 
@@ -16,6 +16,7 @@ preenchido = [0, 0, 0, 0, 0, 0, 0, 0, 0];
             preenchido[i] = 1;
 
             machine();
+
         });
     }
 
@@ -32,11 +33,32 @@ function o() {
 function machine() {
     let machineChoice;
     do {
-        machineChoice = Math.floor((Math.random()*5));
+        machineChoice = Math.floor((Math.random()*9) + 1);
     } while(preenchido[machineChoice] == 1);
 
     document.getElementById(pos[machineChoice]).classList.add('p20');
     document.getElementById(pos[machineChoice]).innerHTML = o();
 
     preenchido[machineChoice] = 1;
+
+    return machineChoice;
+}
+
+function result(playWin, machWin) {
+    if(playWin !== machWin) {
+        return "Deu velha, ninguém ganhou";
+    } else {
+        switch(playWin) {
+            case player:
+                if() {
+
+                }
+            ;
+            case machineChoice:
+                if() {
+                    
+                }
+            ;
+        }
+    }
 }
