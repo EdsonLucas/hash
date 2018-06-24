@@ -1,11 +1,13 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Jogo da Velha</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="assets/images/favicon.png" />
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="index.css" />
-        <link rel="stylesheet" href="pure.css" />
+        <link rel="stylesheet" href="assets/css/index.css" />
+        <link rel="stylesheet" href="assets/css/pure.css" />
     </head>
     <body>
         <section>
@@ -27,42 +29,65 @@
                         				</button>
                         			</div>
                                 </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6">
+                                        <p id="player" class="tcenter">Jogador: 0 pontos</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p id="machine" class="tcenter">Máquina: 0 pontos</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="xdt container-fluid">
                             <div class="row pt50 pl30 pr30">
-                                <div class="col-md-3"></div>
-                                <div class="col-md-6">
+                                <div id="space" class="col-lg-3 col-md-2"></div>
+                                <div id="box" class="col-lg-6 col-md-8">
                                     <div class="col-md-12">
-                                        <div id="var_1" class="box col-md-4 col-sm-4 col-xs-4"></div>
-                                        <div id="var_2" class="box col-md-4 col-sm-4 col-xs-4"></div>
-                                        <div id="var_3" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_0_0" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_0_1" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_0_2" class="box col-md-4 col-sm-4 col-xs-4"></div>
                                     </div>
                                     <div class="col-md-12">
-                                        <div id="var_4" class="box col-md-4 col-sm-4 col-xs-4"></div>
-                                        <div id="var_5" class="box col-md-4 col-sm-4 col-xs-4"></div>
-                                        <div id="var_6" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_1_0" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_1_1" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_1_2" class="box col-md-4 col-sm-4 col-xs-4"></div>
                                     </div>
                                     <div class="col-md-12">
-                                        <div id="var_7" class="box col-md-4 col-sm-4 col-xs-4"></div>
-                                        <div id="var_8" class="box col-md-4 col-sm-4 col-xs-4"></div>
-                                        <div id="var_9" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_2_0" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_2_1" class="box col-md-4 col-sm-4 col-xs-4"></div>
+                                        <div id="var_2_2" class="box col-md-4 col-sm-4 col-xs-4"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="sidebar" class="col-md-3 hidden-sm hidden-xs collapsed p0">
-                        oi
+                    <div id="sidebar" class="col-lg-3 col-md-2 hidden-sm hidden-xs collapsed p0">
+                        <h1>
+                            Regras do jogo
+                        </h1>
+                        <p class="pl15 pr10">
+                            O objetivo do jogador no jogo da velha é ser o primeiro a fazer uma sequência de tres simbolos iguais, seja em uma linha, coluna ou diagonal.<br /><br />
+                            Um jogador joga com o xis (X) e outro com o círculo (O). <strong>No nosso caso o jogador tem como padrão o xis (X) e a máquina o círculo (O).</strong><br /><br />
+                            Cada jogador, na sua vez, desenha (ou coloca a peça), numa lacuna que esteja vazia.<br /><br />
+                            Quando um jogador conquista o objetivo, costuma-se riscar os três símbolos.<br /><br />
+                            Quando há empate costuma-se dizer que o jogo “deu velha”.
+                        </p>
+                        <p class="pl15 pr10">
+                            Bom, agora que você já sabe como funciona, lhe desejo um ótimo jogo!
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/sweetalert2@7.24.1/dist/sweetalert2.all.js"></script>
+        <script type="text/javascript" src="assets/js/index.js"></script>
         <script>
     		document.getElementById("toggle-sidebar").addEventListener("click", function() {
     		    document.querySelector("#sidebar").classList.toggle("collapsed");
-    		    document.querySelector("#content").classList.toggle("col-md-9");
+                document.querySelector("#content").classList.toggle("col-lg-9");
+                document.querySelector('#space').classList.toggle('col-lg-3');
+                document.querySelector('#box').classList.toggle('col-lg-6');
     		});
         </script>
     </body>
